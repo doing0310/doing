@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.doing</groupId>
+        <artifactId>doing</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.doing</groupId>
+    <artifactId>doing-system</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <description>
+        system系统模块
+    </description>
+
+    <dependencies>
+        <!-- Mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- 通用工具-->
+        <dependency>
+            <groupId>com.doing</groupId>
+            <artifactId>doing-common</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
