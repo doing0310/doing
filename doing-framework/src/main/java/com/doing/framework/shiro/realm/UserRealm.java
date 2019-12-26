@@ -1,5 +1,6 @@
 package com.doing.framework.shiro.realm;
 
+import com.doing.common.exception.user.UserException;
 import com.doing.framework.shiro.service.SysLoginService;
 import com.doing.system.bean.SysUser;
 import org.apache.shiro.SecurityUtils;
@@ -62,6 +63,8 @@ public class UserRealm extends AuthorizingRealm {
         SysUser user = null;
         try {
             user = loginService.login(username, password);
+        } catch (UserException e) {
+            throw new UnknownAccountException(e.getMessage(), e);
         } catch (Exception e) {
             log.info("对用户[" + username + "]进行登录验证..验证未通过{}", e.getMessage());
             throw new AuthenticationException(e.getMessage(), e);

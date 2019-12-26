@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * @Effect 权限配置加载
  * @Author doing
@@ -19,7 +20,7 @@ import java.util.Map;
  * @Version 0.0.1
  **/
 @Configuration
-public class shiroConfig {
+class ShiroConfig {
 
     //不加这个注解不生效，具体不详
     @Bean
@@ -62,7 +63,7 @@ public class shiroConfig {
 
         //登出
         map.put("/logout", "logout");
-        //对所有用户认证
+        //对所有用户认
         map.put("/**", "authc");
         //登录
         shiroFilterFactoryBean.setLoginUrl("/login");

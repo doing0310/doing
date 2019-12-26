@@ -55,7 +55,7 @@ function signin() {
                         hint('该邮箱已存在','0');
                     }else if(respDate.result=='1'){
                         hint('账号注册成功，两秒后自动刷新页面','1');
-                        window.setTimeout("window.location='index.html'",2000);
+                        window.setTimeout("window.location='index'",2000);
                     }
                 },
                 error : function(err) {
@@ -82,17 +82,11 @@ function login() {
             dataType : "json",
             success : function(respDate) {
                 console.log(respDate);
-                if (respDate.result == 3) {
 
-                    window.location = "index.html";
-                } else if (respDate.result == 1) {
-                    hint('账号密码错误','0');
-                } else if (respDate.result == 2) {
-                    hint('账号已被禁用','0');
-                } else if (respDate.result == 0) {
-                    hint('验证码有误','0');
-                } else if (respDate.result == 4) {
-                    hint('该账户没有管理员权限','0');
+                if (respDate.code == 0) {
+                    window.location = "index";
+                } else if (respDate.code == 500) {
+                    hint(respDate.msg,'0');
                 }
                 $("#user").val("");
                 $("#passwd").val("");

@@ -1,13 +1,11 @@
 package com.doing.framework.shiro.service;
 
 import com.doing.common.exception.user.UserException;
-import com.doing.common.utils.ServletUtils;
 import com.doing.system.bean.SysUser;
 import com.doing.system.service.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import sun.misc.MessageUtils;
 
 /**
  * @Effect 登录校验方法
@@ -29,11 +27,16 @@ public class SysLoginService {
         // 用户名或密码为空 错误
         if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password))
         {
-            throw new UserException("用户名或密码为空",null);
+            throw new UserException("用户名或密码为空");
         }
 
         // 查询用户信息
         SysUser user = userService.selectUserByLoginName(username,password);
+
+        if (user == null)
+        {
+            throw new UserException("用户名不存在");
+        }
 
         return user;
     }
