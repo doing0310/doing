@@ -1,0 +1,63 @@
+<!-- 通用开头 -->
+<head th:fragment=header(title)>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title th:text="${title}"></title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<!-- Pace -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/plugins/pace-master/themes/blue/pace-theme-flash.css}">
+	<script type="text/javascript" th:src="@{/doing/AdminLTE/plugins/pace-master/pace.min.js}"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/bootstrap/css/bootstrap.min.css}">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/dist/css/font-awesome.min.css}">
+	<!-- Ionicons -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/dist/css/ionicons.min.css}">
+	<!-- jvectormap -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css}">
+	<!-- Theme style -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/dist/css/AdminLTE.min.css}">
+	<!-- 管理皮肤。从css/skins文件夹中选择一个皮肤，而不是下载所有皮肤来减少负载 -->
+	<link rel="stylesheet" th:href="@{/doing/AdminLTE/dist/css/skins/all-skins.min.css}">
+	<!-- HTML5 Shim和Respond.js IE8支持HTML5元素和媒体查询 -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+    <script th:src="@{/doing/AdminLTE/plugins/ie9/respond.min.js}"></script>
+	<script th:src="@{/doing/AdminLTE/plugins/ie9/html5shiv.min.js}"></script>
+	<![endif]-->
+</head>
+
+<!-- 通用结尾 -->
+<div th:fragment="footer">
+
+	<!-- jQuery 2.2.3 -->
+	<script th:src="@{/doing/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js}"></script>
+	<!-- Bootstrap 3.3.6 -->
+	<script th:src="@{/doing/AdminLTE/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- Slimscroll -->
+	<script th:src="@{/doing/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js}"></script>
+	<!-- FastClick -->
+	<script th:src="@{/doing/AdminLTE/plugins/fastclick/fastclick.js}"></script>
+	<!-- AdminLTE App -->
+	<script th:src="@{/doing/AdminLTE/dist/js/app.js}"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script th:src="@{/doing/AdminLTE/dist/js/demo.js}"></script>
+	<!--tabs-->
+	<script th:src="@{/doing/AdminLTE/dist/js/app_iframe.js}"></script>
+
+</div>
+
+<!-- welcome.html -->
+<div th:fragment="sparkline">
+	<script th:src="@{/doing/AdminLTE/sparkline/jquery.sparkline.min.js"></script>
+</div>
+<div th:fragment="jvectormap">
+	<script th:src="@{/doing/AdminLTE/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+	<script th:src="@{/doing/AdminLTE/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+</div>
+<div th:fragment="Chart">
+	<script th:src="@{/doing/AdminLTE/plugins/chartjs/Chart.min.js"></script>
+</div>

@@ -1,8 +1,6 @@
 package com.doing.web.controller.system;
 
 import com.doing.common.core.controller.BaseController;
-import com.doing.system.bean.SysUser;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -40,11 +38,12 @@ public class SysIndexController extends BaseController
     }
 
     // 系统介绍
-    @GetMapping("/system/main")
+    @GetMapping("/system/welcome")
     public String main(ModelMap mmap)
     {
 //        mmap.put("version", Global.getVersion());
 //        return "main";
-        return "main_v2";
+        return "system/welcome";
     }
+
 }
