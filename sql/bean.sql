@@ -1,5 +1,6 @@
 -- 创建表空间名
 create database testdb default character set utf8 collate utf8_bin;
+create database testdb default character set utf8 collate utf8_genera_ci;
 -- 删除表“testdb”
 -- drop database testdb;
 -- 删除用户“test”
